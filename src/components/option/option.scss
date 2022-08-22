@@ -1,0 +1,32 @@
+.option {
+    // display: flex;
+    .opt {
+        display: flex;
+        font-size: 18px;
+        line-height: 24.84px;
+        font-weight: 400;
+        margin-bottom: 10px;
+
+        span {
+            font-weight: 500;
+            margin-right: 5px;
+        }
+
+    }
+    .products{
+        display: flex;
+        .items{
+            margin-right: 15px;
+            border: none;
+
+            &:hover{
+                border: 2px solid #ed8f03;
+                border-radius: 5px;
+            }
+            img{
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+}

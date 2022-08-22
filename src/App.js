@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState ,useEffect} from 'react'
+import './App.css'
+import Bottom from './components/bottom/Bottom'
+import Top from './components/top/Top'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-function App() {
+const App = () => {
+
+  const [ image ,setImage] = useState([]);
+
+  const api = async()=>{
+    const getApi =await fetch('https://fakestoreapi.com/products')
+    const res =await getApi.json();
+    console.log(res.title)
+
+  }
+
+  useEffect(()=>{
+    api()
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Router className="App">
+        <Top />
+        <Bottom />
+      </Router>
+    </>
+  )
 }
 
-export default App;
+export default App

@@ -1,0 +1,17 @@
+.top{
+    display: flex;
+}
+
+.top .top-part{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+}
+
+.top .top-part .text-part{
+    
+}
+.image img{
+    width: 300px;
+}
