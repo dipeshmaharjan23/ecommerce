@@ -15,9 +15,12 @@
     }
     .products{
         display: flex;
+        max-height: 70px;
         .items{
             margin-right: 15px;
             border: none;
+            padding: 5px;
+            
 
             &:hover{
                 border: 2px solid #ed8f03;

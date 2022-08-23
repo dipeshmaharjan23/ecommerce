@@ -2,7 +2,7 @@
 
 
 .top {
-    margin: 91px 30px;
+    margin: 91px 241px 0 30px;
     // align-items: center;
     // border: 1px solid;
 
@@ -14,8 +14,8 @@
         .image {
             flex: 1;
             // border: 1px solid;
-            margin-left: 95px;  
-            margin-right: 137px;
+            // margin-left: 95px;  
+            // margin-right: 137px;
 
             .bigimage {
                 img {
@@ -44,12 +44,15 @@
                 .second {
                     transform: rotateY(180deg);
                 }
+
                 .third {
                     transform: rotate(180deg);
                 }
+
                 .fourth {
                     transform: rotate(0deg);
                 }
+
                 .fifth {
                     transform: rotateX(180deg);
                 }
@@ -57,13 +60,15 @@
         }
 
         .text-part {
-            flex: 2;
+            flex: 1;
+            // border: 1px solid;
+            width: 863px;
 
             .first-text {
 
                 display: flex;
                 position: relative;
-                
+
 
                 h3 {
                     // width: 857px;
@@ -255,11 +260,13 @@
     }
 
     .middle {
-
         .middle-title {
             display: flex;
             justify-content: center;
             align-items: center;
+            // border: 1px solid;
+            margin-left: 415px;
+            // margin-right: 480px;
 
             h4 {
                 position: relative;
@@ -296,9 +303,10 @@
         .middle-text {
             display: flex;
             margin-top: 40px;
+            margin-left: 306.5px;
 
             .middle-left {
-                align-items: center;
+                // align-items: center;
                 margin-right: 10px;
 
 
@@ -312,14 +320,25 @@
                 .items {
                     display: flex;
                     width: 562px;
-                    // height: 50px;
                     background-color: #f5f5f5;
                     align-items: center;
-                    justify-content: space-between;
+                    padding-left: 5px;
 
                     &:nth-child(3) {
                         background-color: #fff;
 
+                    }
+
+                    .weight {
+                        margin-right: 173px;
+                    }
+
+                    .dimensions {
+                        margin-right: 177px;
+                    }
+
+                    .model {
+                        margin-right: 110px;
                     }
 
 
@@ -339,12 +358,24 @@
                     display: flex;
                     width: 562px;
                     align-items: center;
-                    // height: 50px;
                     background-color: #f5f5f5;
-                    justify-content: space-between;
+                    padding-left: 5px;
+
 
                     &:nth-child(3) {
                         background-color: #fff;
+                    }
+
+                    .weight {
+                        margin-right: 173px;
+                    }
+
+                    .dimensions {
+                        margin-right: 177px;
+                    }
+
+                    .model {
+                        margin-right: 110px;
                     }
                 }
             }

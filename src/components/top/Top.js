@@ -5,11 +5,14 @@ import Options from '../option/Options.js';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
 import cream from '../../assests/cream.jpg'
+import images from '../service/Service'
 
 const Top = () => {
     const INITIAL_PRICE = 1400;
     const [price, setPrice] = useState(INITIAL_PRICE)
     const [quantity, setQuantity] = useState(1)
+    const [selected, setSelected] = useState(images[0]);
+
 
     const increase = () => {
         setQuantity(quantity + 1)
@@ -31,7 +34,7 @@ const Top = () => {
                 <div className='image'>
 
                     <div className="bigimage">
-                        <img src={cream} alt="cushion" />
+                        <img src={selected} alt="cushion" />
                     </div>
 
                     <div className="smallimage">
@@ -39,16 +42,16 @@ const Top = () => {
                             <img src={cream} alt="cushion" />
                         </div>
                         <div className="small second">
-                            <img src={cream} alt="cushion" style={{imageOrientation :"flip"}}/>
+                            <img src={cream} alt="cushion" style={{ imageOrientation: "flip" }} />
                         </div>
                         <div className="small third">
-                            <img src={cream} alt="cushion" style={{imageOrientation :"flip"}}/>
+                            <img src={cream} alt="cushion" style={{ imageOrientation: "flip" }} />
                         </div>
                         <div className="small fourth">
-                            <img src={cream} alt="cushion" style={{imageOrientation :"flip"}}/>
+                            <img src={cream} alt="cushion" style={{ imageOrientation: "flip" }} />
                         </div>
                         <div className="small fifth">
-                            <img src={cream} alt="cushion" style={{imageOrientation :"flip"}}/>
+                            <img src={cream} alt="cushion" style={{ imageOrientation: "flip" }} />
                         </div>
                     </div>
                 </div>
@@ -69,7 +72,7 @@ const Top = () => {
 
                     <hr />
 
-                    <Options />
+                    <Options images={images} setSelected={setSelected}/>
 
                     <hr />
                     <div className="price">
@@ -146,15 +149,15 @@ const Top = () => {
                         <h3>Technical Details</h3>
 
                         <div className="items">
-                            <p>item Weight</p>
+                            <span className='weight'>item Weight</span>
                             <p>29 pound</p>
                         </div>
                         <div className="items">
-                            <p>Dimensions</p>
+                            <span className='dimensions'>Dimensions</span>
                             <p>38*40*31.5inches</p>
                         </div>
                         <div className="items">
-                            <p>Item model number</p>
+                            <span className='model'>Item model number</span>
                             <p>BF29296BR-M52</p>
                         </div>
                     </div>
@@ -163,15 +166,15 @@ const Top = () => {
                         <h3>Other Details</h3>
 
                         <div className="items">
-                            <p>item Weight</p>
+                            <span className='weight'>item Weight</span>
                             <p>29 pound</p>
                         </div>
                         <div className="items">
-                            <p>Dimensions</p>
+                            <span className='weight'>Dimensions</span>
                             <p>38*40*31.5inches</p>
                         </div>
                         <div className="items">
-                            <p>Item model number</p>
+                            <span className='model'>Item model number</span>
                             <p>BF29296BR-M52</p>
                         </div>
                     </div>

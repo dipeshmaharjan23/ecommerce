@@ -1,6 +1,7 @@
 .bottom {
     background-color: #181818;
     height: 670px;
+    margin-top: 102px;
 
     .text {
         display: flex;
@@ -8,17 +9,17 @@
         .contents {
             display: flex;
             flex-direction: column;
-            margin-left: 90px;
+            margin-right: 174px;
             color: #fff;
             margin-top: 85px;
 
 
             &:first-child {
-                margin-left: 50px;
+                margin-left: 91px;
             }
 
             &:last-child {
-                margin-right: 50px;
+                margin-right: 106.5px;
             }
 
             .icons{
