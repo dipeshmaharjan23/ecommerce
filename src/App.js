@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import Bottom from './components/bottom/Bottom'
-import Top from './components/top/Top'
+import Main from './components/main/Main.js'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 const App = () => {
@@ -10,7 +10,7 @@ const App = () => {
     <>
       <Router>
         <div className="App">
-          <Top />
+          <Main />
           <Bottom />
         </div>
       </Router>

@@ -1,5 +1,6 @@
-.option {
-    // display: flex;
+.image-item {
+   
+
     .opt {
         display: flex;
         font-size: 18px;
@@ -11,25 +12,26 @@
             font-weight: 500;
             margin-right: 5px;
         }
-
     }
-    .products{
+    
+    .product{
         display: flex;
         max-height: 70px;
-        .items{
+        .image-product {
             margin-right: 15px;
             border: none;
             padding: 5px;
             
-
-            &:hover{
+            &:hover {
                 border: 2px solid #ed8f03;
                 border-radius: 5px;
             }
-            img{
+            
+            img {
                 width: 60px;
                 height: 60px;
             }
         }
     }
+    
 }

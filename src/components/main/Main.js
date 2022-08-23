@@ -1,18 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import './top.scss'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import Options from '../option/Options.js';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
-import cream from '../../assests/cream.jpg'
-import images from '../service/Service'
+import Products from '../products/Products';
 
-const Top = () => {
+const Main = () => {
+
     const INITIAL_PRICE = 1400;
     const [price, setPrice] = useState(INITIAL_PRICE)
     const [quantity, setQuantity] = useState(1)
-    const [selected, setSelected] = useState(images[0]);
 
+    const [selectedImage,setSelectedImage] =useState(null)
+    const [images,setImages] = useState([])
+    const [imageClass,setImageClass] = useState("");
+
+    const classes =["","first","second","third","fouth","fifth"]
+
+    const getApi = async () => {
+        const api = await fetch(`https://fakestoreapi.com/products?limit=5`);
+        const data = await api.json();
+        setSelectedImage(data[0])
+        console.log(data)
+        setImages(data)
+    }
+    useEffect(() => {
+        getApi()
+    }, [])
+    
 
     const increase = () => {
         setQuantity(quantity + 1)
@@ -34,25 +49,38 @@ const Top = () => {
                 <div className='image'>
 
                     <div className="bigimage">
-                        <img src={selected} alt="cushion" />
+
+                        { selectedImage  ? <img className={imageClass } src={selectedImage.image} alt={selectedImage.title} /> : null}
+                        
                     </div>
+                 
 
                     <div className="smallimage">
-                        <div className="small">
+                    {
+                        classes.map((item)=>{
+                            return (
+                                <div className={`small ${item} `} onClick={()=>setImageClass(item)} key={item}>
+                                {/* <img src={selectedImage ? } alt="cushion" /> */}
+                                   { selectedImage  ? <img src={selectedImage.image} alt={selectedImage.title} /> : null}
+                            </div>
+                            )
+                        })
+                    }
+                        {/* <div className="small">
                             <img src={cream} alt="cushion" />
                         </div>
                         <div className="small second">
-                            <img src={cream} alt="cushion" style={{ imageOrientation: "flip" }} />
+                            <img src={cream} alt="cushion" onClick={()=>setImageClass("second")} style={{ imageOrientation: "flip" }} />
                         </div>
                         <div className="small third">
-                            <img src={cream} alt="cushion" style={{ imageOrientation: "flip" }} />
+                            <img src={cream} alt="cushion" onClick={()=>setImageClass("third")} style={{ imageOrientation: "flip" }} />
                         </div>
                         <div className="small fourth">
-                            <img src={cream} alt="cushion" style={{ imageOrientation: "flip" }} />
+                            <img src={cream} alt="cushion" onClick={()=>setImageClass("fourth")} style={{ imageOrientation: "flip" }} />
                         </div>
                         <div className="small fifth">
-                            <img src={cream} alt="cushion" style={{ imageOrientation: "flip" }} />
-                        </div>
+                            <img src={cream} alt="cushion" onClick={()=>setImageClass("fifth")} style={{ imageOrientation: "flip" }} />
+                        </div> */}
                     </div>
                 </div>
                 <div className='text-part'>
@@ -72,7 +100,7 @@ const Top = () => {
 
                     <hr />
 
-                    <Options images={images} setSelected={setSelected}/>
+                    <Products images={images} setSelectedImage={setSelectedImage}/>
 
                     <hr />
                     <div className="price">
@@ -184,4 +212,4 @@ const Top = () => {
     )
 }
 
-export default Top
+export default Main

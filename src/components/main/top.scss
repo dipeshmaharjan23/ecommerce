@@ -41,21 +41,7 @@
                     }
                 }
 
-                .second {
-                    transform: rotateY(180deg);
-                }
-
-                .third {
-                    transform: rotate(180deg);
-                }
-
-                .fourth {
-                    transform: rotate(0deg);
-                }
-
-                .fifth {
-                    transform: rotateX(180deg);
-                }
+            
             }
         }
 
@@ -382,4 +368,20 @@
         }
     }
 
+}
+
+.second {
+    transform: rotateY(180deg);
+}
+
+.third {
+    transform: rotate(180deg);
+}
+
+.fourth {
+    transform: rotate(0deg);
+}
+
+.fifth {
+    transform: rotateX(180deg);
 }
