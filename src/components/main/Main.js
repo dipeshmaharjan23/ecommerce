@@ -1,5 +1,5 @@
 import React, { useState ,useEffect} from 'react'
-import './top.scss'
+import './main.scss'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
@@ -39,7 +39,6 @@ const Main = () => {
             setQuantity(quantity - 1)
             setPrice(price - INITIAL_PRICE)
         }
-
     }
     const discount = 0.10 * price;
 
@@ -47,13 +46,9 @@ const Main = () => {
         <div className='top'>
             <div className='top-part'>
                 <div className='image'>
-
                     <div className="bigimage">
-
                         { selectedImage  ? <img className={imageClass } src={selectedImage.image} alt={selectedImage.title} /> : null}
-                        
                     </div>
-                 
 
                     <div className="smallimage">
                     {

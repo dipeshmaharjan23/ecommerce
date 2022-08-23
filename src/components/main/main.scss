@@ -2,25 +2,19 @@
 
 
 .top {
-    margin: 91px 241px 0 30px;
-    // align-items: center;
-    // border: 1px solid;
-
+    margin: 91px 70px;
 
     .top-part {
         display: flex;
-        // border: 1px solid;
 
         .image {
-            flex: 1;
-            // border: 1px solid;
-            // margin-left: 95px;  
-            // margin-right: 137px;
+            flex: 0.5;
+            margin-left: 50px;
 
             .bigimage {
                 img {
-
                     width: 300px;
+                    max-width: 300px;
                     height: 300px;
                 }
             }
@@ -31,11 +25,8 @@
 
                 .small {
                     margin-right: 14.67px;
-                    // margin-left: 14.67px;
 
                     img {
-                        // width: 86.31px;
-                        // height: 86.31px; 
                         width: 49.31px;
                         height: 49.31px;
                     }
@@ -46,9 +37,7 @@
         }
 
         .text-part {
-            flex: 1;
-            // border: 1px solid;
-            width: 863px;
+            flex: 0.8;
 
             .first-text {
 
@@ -64,7 +53,7 @@
                     line-height: 49.68px;
 
                     span {
-                        width: 108px;
+                        // width: 108px;
                         height: 22px;
                         background-color: #000;
                         border-radius: 24px;
@@ -81,7 +70,7 @@
                     position: absolute;
                     bottom: 0;
                     right: 0;
-                    width: 155px;
+                    // width: 155px;
                     border-radius: 17.5px;
                     display: flex;
                     align-items: center;
@@ -198,7 +187,7 @@
                 }
 
                 ul {
-                    width: 863px;
+                    // width: 863px;
 
                     li {
                         font-size: 18px;
@@ -223,7 +212,7 @@
                     position: relative;
 
                     .inp {
-                        width: 491px;
+                        // width: 491px;
                         height: 61px;
                         background-color: #dcdcdc;
                         border: none;
@@ -251,7 +240,7 @@
             justify-content: center;
             align-items: center;
             // border: 1px solid;
-            margin-left: 415px;
+            // margin-left: 415px;
             // margin-right: 480px;
 
             h4 {
@@ -289,10 +278,9 @@
         .middle-text {
             display: flex;
             margin-top: 40px;
-            margin-left: 306.5px;
-
+            justify-content: space-around;
+            
             .middle-left {
-                // align-items: center;
                 margin-right: 10px;
 
 
@@ -305,7 +293,7 @@
 
                 .items {
                     display: flex;
-                    width: 562px;
+                    // width: 562px;
                     background-color: #f5f5f5;
                     align-items: center;
                     padding-left: 5px;
@@ -342,7 +330,7 @@
 
                 .items {
                     display: flex;
-                    width: 562px;
+                    // width: 562px;
                     align-items: center;
                     background-color: #f5f5f5;
                     padding-left: 5px;
