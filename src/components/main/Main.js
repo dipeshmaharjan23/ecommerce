@@ -15,7 +15,7 @@ const Main = () => {
     const [images,setImages] = useState([])
     const [imageClass,setImageClass] = useState("");
 
-    const classes =["","first","second","third","fouth","fifth"]
+    const classes =["","first","second","third","fourth","fifth"]
 
     const getApi = async () => {
         const api = await fetch(`https://fakestoreapi.com/products?limit=5`);
@@ -54,28 +54,13 @@ const Main = () => {
                     {
                         classes.map((item)=>{
                             return (
-                                <div className={`small ${item} `} onClick={()=>setImageClass(item)} key={item}>
-                                {/* <img src={selectedImage ? } alt="cushion" /> */}
+                                <button className={`small ${item} `} onClick={()=>setImageClass(item)} key={item}>
                                    { selectedImage  ? <img src={selectedImage.image} alt={selectedImage.title} /> : null}
-                            </div>
+                            </button>
                             )
                         })
                     }
-                        {/* <div className="small">
-                            <img src={cream} alt="cushion" />
-                        </div>
-                        <div className="small second">
-                            <img src={cream} alt="cushion" onClick={()=>setImageClass("second")} style={{ imageOrientation: "flip" }} />
-                        </div>
-                        <div className="small third">
-                            <img src={cream} alt="cushion" onClick={()=>setImageClass("third")} style={{ imageOrientation: "flip" }} />
-                        </div>
-                        <div className="small fourth">
-                            <img src={cream} alt="cushion" onClick={()=>setImageClass("fourth")} style={{ imageOrientation: "flip" }} />
-                        </div>
-                        <div className="small fifth">
-                            <img src={cream} alt="cushion" onClick={()=>setImageClass("fifth")} style={{ imageOrientation: "flip" }} />
-                        </div> */}
+                    
                     </div>
                 </div>
                 <div className='text-part'>
@@ -85,12 +70,12 @@ const Main = () => {
                             <span>#1 in CHARTS</span>
 
                         </h3>
-                        <div className='textt-right'>
+                        <button className='textt-right'>
                             <FavoriteBorderIcon className='love' />
                             <div>
                                 Add to wishlist
                             </div>
-                        </div>
+                        </button>
                     </div>
 
                     <hr />

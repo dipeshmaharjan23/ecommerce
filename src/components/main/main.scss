@@ -25,6 +25,14 @@
 
                 .small {
                     margin-right: 14.67px;
+                    padding: 2px;
+                    border: none;
+
+                    &:hover{
+                    border: 1px solid #ed8f03;
+                    border-radius: 5px;
+
+                    }
 
                     img {
                         width: 49.31px;
@@ -43,7 +51,7 @@
 
                 display: flex;
                 position: relative;
-
+                margin-bottom: 28px;
 
                 h3 {
                     // width: 857px;
@@ -68,7 +76,7 @@
 
                 .textt-right {
                     position: absolute;
-                    bottom: 0;
+                    bottom: -13px;
                     right: 0;
                     // width: 155px;
                     border-radius: 17.5px;
@@ -97,9 +105,9 @@
 
             .price {
                 display: flex;
-                // border: 1px solid;
                 justify-content: space-between;
-                // width: ;
+                margin-top: 64px;
+                margin-bottom: 54px;
 
                 .price-left {
                     display: flex;
@@ -358,18 +366,23 @@
 
 }
 
-.second {
+.first{
     transform: rotateY(180deg);
 }
 
-.third {
+.second {
     transform: rotate(180deg);
 }
 
-.fourth {
+.third {
     transform: rotate(0deg);
 }
 
-.fifth {
+.fourth {
     transform: rotateX(180deg);
+
+}
+
+.fifth {
+    transform: rotateY(180deg);
 }
